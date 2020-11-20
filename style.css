@@ -1,0 +1,193 @@
+:root {
+  --card-shadow: 0 0 12px 13px rgba(69, 69, 69, 0.1);
+  --li-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);
+  --gradient: linear-gradient(-45deg, #088cff, #ff002b);
+}
+body {
+  margin: 0;
+  font-family: poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  perspective: 1000px;
+  background: #000a15;
+}
+.card {
+  transform-style: preserve-3d;
+  width: 300px;
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 4rem 2rem;
+  background: #000000;
+  color: #fff;
+}
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-circle {
+  background: var(--gradient);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 1;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+img {
+  width: 220px;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.card:hover img {
+  transform: translateZ(120px) rotate(-35deg);
+  -webkit-transform: translateZ(120px) rotate(-35deg);
+  -moz-transform: translateZ(120px) rotate(-35deg);
+  -ms-transform: translateZ(120px) rotate(-35deg);
+  -o-transform: translateZ(120px) rotate(-35deg);
+}
+
+.card:hover .title {
+  transform: translateZ(100px);
+  -webkit-transform: translateZ(100px);
+  -moz-transform: translateZ(100px);
+  -ms-transform: translateZ(100px);
+  -o-transform: translateZ(100px);
+}
+
+.card:hover .description {
+  transform: translateZ(75px);
+  -webkit-transform: translateZ(75px);
+  -moz-transform: translateZ(75px);
+  -ms-transform: translateZ(75px);
+  -o-transform: translateZ(75px);
+}
+
+.card:hover .sizes {
+  transform: translateZ(60px);
+  -webkit-transform: translateZ(60px);
+  -moz-transform: translateZ(60px);
+  -ms-transform: translateZ(60px);
+  -o-transform: translateZ(60px);
+}
+.card:hover .purchase-btn {
+  transform: translateZ(55px);
+  -webkit-transform: translateZ(55px);
+  -moz-transform: translateZ(55px);
+  -ms-transform: translateZ(55px);
+  -o-transform: translateZ(55px);
+}
+.title {
+  padding: 2rem 0 1rem 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
+  padding: 1rem 0;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+ul li {
+  padding: 0rem 1rem;
+  box-shadow: var(--li-shadow);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.title {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.description {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.purchase-btn {
+  width: 100%;
+  padding: 0.7rem;
+  text-align: center;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.active {
+  box-shadow: none;
+  background-color: #333;
+  color: #fff;
+}
+
+.purchase-btn:hover {
+  transform: translateZ(55px) scale(1.05) !important;
+  -webkit-transform: translateZ(55px) scale(1.05) !important;
+  -moz-transform: translateZ(55px) scale(1.05) !important;
+  -ms-transform: translateZ(55px) scale(1.05) !important;
+  -o-transform: translateZ(55px) scale(1.05) !important;
+}
+
+.purchase-btn:active {
+  transition: all 0.01s;
+  transform: translateZ(55px) scale(0.9) !important;
+  -webkit-transform: translateZ(55px) scale(0.9) !important;
+  -moz-transform: translateZ(55px) scale(0.9) !important;
+  -ms-transform: translateZ(55px) scale(0.9) !important;
+  -o-transform: translateZ(55px) scale(0.9) !important;
+  -webkit-transition: all 0.01s;
+  -moz-transition: all 0.01s;
+  -ms-transition: all 0.01s;
+  -o-transition: all 0.01s;
+}
